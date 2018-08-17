@@ -1,0 +1,264 @@
+﻿<div style="background-color:lightgrey;text-align:center;">
+    <table>
+        <tr>
+            <td style="height:10px;" colspan="3"></td>
+        </tr>
+      <tr>
+          <td style="width:5px;"></td>
+          <td>
+                <table class="pageBorder" >
+                        <tr>
+                            <td style="width:100px;"></td>
+                            <td style="font-weight:bold;font-size:16px;width:500px">Tax Remittance - Verification</td>
+                            <td style="width:50px;"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="height:12px;"></td>
+                        </tr>
+                        <tr>
+                            <td ></td>
+                            <td>
+                                <table style="width:200px">
+                                    <tr>
+                                        <td class="standLabelBoldL">Period</td>
+                                        <td style="text-align:left;">{{CurrPeriod}}</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td ></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="height:12px;"></td>
+                        </tr>
+                        <tr>
+                            <td ></td>
+                            <td>
+                                <table border="1" style="height:50px;">
+                                    <tr>
+                                        <td>
+                                            <table style="height:30px;">
+                                                <tr>
+                                                    <td style="width:10px;"></td>
+                                                    <td class="standLabelBoldL" style="width:400px;">{{rptNo1}}</td>
+                                                    <td style="width:10px;font-size:24px;"><button value="+" (click)="displayRpt(1)" class="button" style="width:130px;">Display Report</button></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td ></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="height:12px;"></td>
+                        </tr>
+                        <tr>
+                            <td ></td>
+                            <td>
+                                <table border="1" style="height:50px;">
+                                    <tr>
+                                        <td>
+                                            <table style="height:30px;">
+                                                <tr>
+                                                    <td style="width:10px;"></td>
+                                                    <td class="standLabelBoldL" style="width:400px;">{{rptNo2}}</td>
+                                                    <td style="width:10px;font-size:24px;"><button value="+" (click)="displayRpt(2)" class="button" style="width:130px;">Display Report</button></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td ></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="height:12px;"></td>
+                        </tr>
+                        <tr>
+                            <td ></td>
+                            <td>
+                                <table border="1" style="height:50px;">
+                                    <tr>
+                                        <td>
+                                            <table style="height:30px;">
+                                                <tr>
+                                                    <td style="width:10px;"></td>
+                                                    <td class="standLabelBoldL" style="width:400px;">{{rptNo3}}</td>
+                                                    <td style="width:10px;font-size:24px;"><button value="+" (click)="displayRpt(3)" class="button" style="width:130px;">Display Report</button></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td ></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="height:12px;"></td>
+                        </tr>
+                        <tr>
+                            <td ></td>
+                            <td>
+                                <table border="1" style="height:50px;">
+                                    <tr>
+                                        <td>
+                                            <table style="height:30px;">
+                                                <tr>
+                                                    <td style="width:10px;"></td>
+                                                    <td class="standLabelBoldL" style="width:400px;">{{rptNo4}}</td>
+                                                    <td style="width:10px;font-size:24px;"><button value="+" (click)="displayRpt(4)" class="button" style="width:130px;">Display Report</button></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td ></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="height:12px;"></td>
+                        </tr>
+                        <tr>
+                            <td ></td>
+                            <td>
+                                <table border="1" style="height:50px;">
+                                    <tr>
+                                        <td>
+                                            <table style="height:30px;">
+                                                <tr>
+                                                    <td style="width:10px;"></td>
+                                                    <td class="standLabelBoldL" style="width:400px;">{{rptNo5}}</td>
+                                                    <td style="width:10px;font-size:24px;"><button value="+" (click)="displayRpt(5)" class="button" style="width:130px;">Display Report</button></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td ></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="height:12px;"></td>
+                        </tr>
+                        <tr>
+                            <td ></td>
+                            <td>
+                                <table border="1" style="height:70px;">
+                                    <tr>
+                                        <td>
+                                            <table>
+                                                <tr>
+                                                    <td style="width:10px;"></td>
+                                                    <td class="standLabelBoldL" style="width:400px;">{{rptNo6}}</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="width:10px;"></td>
+                                                    <td class="standLabelBoldC" >- Period</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3" style="text-align: center;"><rpt-dialog [(visible)]="showDialog" [(RptNo)]="selectedRptNo" (newReport)="closeRpt($event)"></rpt-dialog></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="width:10px;"></td>
+                                                    <td class="standLabelBoldC" >- Company</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="width:10px;"></td>
+                                                    <td class="standLabelBoldC" style="width:400px;">- Jurisdiction</td>
+                                                    <td style="width:10px;vertical-align:central;font-size:24px;"><button value="Select" (click)="displayRpt(6)" class="button" style="width:130px;">Select 2nd filter</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="height:12px;" colsan="3"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td ></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="height:12px;"></td>
+                        </tr>
+                        <tr>
+                            <td ></td>
+                            <td>
+                                <table border="1" style="height:50px;">
+                                    <tr>
+                                        <td>
+                                            <table style="height:30px;">
+                                                <tr>
+                                                    <td style="width:10px;"></td>
+                                                    <td class="standLabelBoldL" style="width:400px;">{{rptNo7}}</td>
+                                                    <td style="width:10px;font-size:24px;"><button value="+" (click)="displayRpt(7)" class="button" style="width:130px;">Display Report</button></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td ></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="height:12px;"></td>
+                        </tr>
+                        <tr>
+                            <td ></td>
+                            <td>
+                                <table border="1" style="height:50px;">
+                                    <tr>
+                                        <td>
+                                            <table style="height:30px;">
+                                                <tr>
+                                                    <td style="width:10px;"></td>
+                                                    <td class="standLabelBoldL" style="width:400px;">{{rptNo8}}</td>
+                                                    <td style="width:10px;font-size:24px;"><button value="+" (click)="displayRpt(8)" class="button" style="width:130px;">Display Report</button></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td ></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="height:12px;"></td>
+                        </tr>
+                        <tr>
+                            <td ></td>
+                            <td>
+                                <table border="1" style="height:50px;">
+                                    <tr>
+                                        <td>
+                                            <table style="height:30px;">
+                                                <tr>
+                                                    <td style="width:10px;"></td>
+                                                    <td class="standLabelBoldL" style="width:400px;">{{rptNo9}}</td>
+                                                    <td style="width:10px;font-size:24px;"><button value="+" (click)="displayRpt(9)" class="button" style="width:130px;">Display Report</button></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td ></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="height:12px;"><div id="ShowDetails"></div></td>
+                        </tr>
+                </table>
+          </td>
+          <td style="width:5px;"></td>
+      </tr>
+      <tr>
+         <td style="height:10px;" colspan="3"></td>
+      </tr>
+    </table>
+
+   
+        
+</div>
+ 

@@ -1,0 +1,124 @@
+﻿
+    <div [@dialog] *ngIf="visible" class="dialog"  style="background-color:lightgrey;text-align:center;">
+        <table >
+            <tr>
+                <td style="height:5px;" colspan="3"></td>
+            </tr>
+            <tr>
+                 <td style="width:5px;"></td>
+                    <td>
+                        <table class="pageBorder">        
+                            <tr>
+                               <td style="width:3px;"></td> 
+                               <td>      
+                                <table class="statusLine" >
+                                    <tr>
+                                        <td style="text-align: center;"><div [ngClass]="StatusClass">{{JobStatus}}</div></td>
+                                    </tr>
+                                    <tr>                                            
+                                        <td class="pageHdr">Carbon tax for period: {{CurrPeriod}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><button (click)="close()" aria-label="Close" class="dialog__close-btn" ><img  src="/src/assets/Exit.png" class="dtlimage" height="30" width="30"/></button></td>
+                                    </tr>
+                                </table>
+                                </td>
+                                <td style="width:3px;"></td>
+                            </tr>
+                            <tr>
+                                <td class="emptyLine" colspan="3"></td>
+                            </tr>
+                            <tr>
+                                <td style="width:3px;"></td> 
+                                <td style="text-align: left;">
+                                    <table>
+                                        <tr>
+                                            <td class="standLabelBoldR" style="width:200px;" >Vendor Number:</td>
+                                            <td>{{carbonFuelTaxWrapperFrmDB.VendorNo}}</td>
+                                            <td style="width:5px;"></td>
+                                            <td class="standLabelBoldR" style="width:200px;">Payment Method:</td>
+                                            <td>{{carbonFuelTaxWrapperFrmDB.PaymentMethod}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="standLabelBoldR" >Tax I.D.</td>
+                                            <td>{{carbonFuelTaxWrapperFrmDB.TaxId}}</td>
+                                            <td style="width:5px;"></td>
+                                            <td class="standLabelBoldR" >Due Date:</td>
+                                            <td>{{carbonFuelTaxWrapperFrmDB.DueDate | date: 'y/M/d'}}</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td style="width:3px;"></td>
+                            </tr>
+                            <tr>
+                                <td class="emptyLine" colspan="3"></td>
+                            </tr>   
+                            <tr>
+                                <td style="width:3px;"></td> 
+                                <td > 
+                                   <table class="gridColors">
+                                        <tr class="gridHdr">
+                                            <td style="text-align:center;width:100px;">Completed</td>
+                                            <td style="text-align:center;width:100px;">Jurisdiction</td>
+                                            <td style="text-align:center;width:110px;">Total Litres</td>
+                                            <td style="text-align:center;width:110px;">Adjustment</td>
+                                            <td style="text-align:center;width:130px;">Total Litres to Pay</td>
+                                            <td style="text-align:center;width:110px;">Rate/Litre</td>
+                                            <td style="text-align:center;width:110px;">Total to pay</td>
+                                            <td style="text-align:center;width:110px;">Difference</td>
+                                        </tr>
+                                        <tr *ngFor="let curr of carbonFuelTaxWrapperFrmDB.AvailFuelTax; index as i; even as isEven; odd as isOdd" [ngStyle]="{'background-color': curr.IsOdd ? 'white' : 'lightgrey' }" >
+                                                <td style="text-align:center;"><Input type="checkbox" checked={{curr.Completed}} /> </td>
+                                                <td style="text-align:right">{{curr.Jurisdiction }}</td>
+                                                <td style="text-align:right;">{{curr.TotalLitres | number: '1.0'}}</td>
+                                                <td style="text-align:right;">{{curr.Adjustment | number: '1.0'}}</td>
+                                                
+                                                <td style="text-align:right;">{{curr.TotalLitresToPay | number: '1.0'}}</td>
+                                                <td style="text-align:right;">{{curr.RatePerLitre | number: '1.0'}}</td>
+                                                <td style="text-align:right;">{{curr.TotalLitresToPay | number: '1.2'}}</td>
+                                                <td style="text-align:right;">{{curr.PercDiff | number: '1.0'}}%</td>                                          
+                                        </tr>   
+                                   </table>  
+                                </td>               
+                                <td style="width:3px;"></td> 
+                            </tr>
+                            <tr>
+                                    <td class="emptyLine" colspan="3"></td>
+                            </tr>   
+                            <tr>
+                                <td style="width:3px;"></td> 
+                                <td >
+                                        <table>
+                                            <tr>
+                                                <td style="width:400px;"></td>
+                                                <td class="standLabelBoldR" style="width:200px;">Total litres To Pay</td>
+                                                <td class="standLabelBoldR" style="width:120px;">Total to Pay</td>
+                                                <td style="width:4px;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td style="text-align:right;">{{carbonFuelTaxWrapperFrmDB.TotalLitresToPay}}</td>
+                                                <td style="text-align:right;">{{carbonFuelTaxWrapperFrmDB.TotalToPay}}</td>
+                                                <td></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                <td style="width:3px;"></td> 
+                            </tr>
+                        </table>
+                 </td>
+            </tr>
+                
+             
+            <tr>
+                <td class="emptyLine" colspan="3"></td>
+            </tr>
+            
+            
+           
+           
+        </table>
+    </div>
+
+
+

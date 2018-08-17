@@ -1,0 +1,163 @@
+﻿<div >  
+    <table class="groupBorder" style="width:700px;background-color:lightgrey;">
+        <tr>
+            <td colspan="2" style="text-align:center;">
+                <table style="width:600px;">
+                    <tr>
+                        <td style="width:200px;"></td>
+                        <td style="font-weight:bold;font-size:16px;width:500px">Tax Remittance - Administration</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="height:12px;"></td>
+                    </tr>
+                    <tr>
+                        <td style="width:200px;"></td>
+                        <td>
+                            <table style="height:50px;" class="groupBorder">
+                                <tr>
+                                    <td>
+                                        <table style="height:30px;">
+                                            <tr>
+                                                <td style="width:10px;"></td>
+                                                <td style="width:300px;font-weight:bold;color:black;">Payment grouping - CA</td>
+                                                <td style="width:10px;font-size:24px;"><input type="submit" name="Rpt1" onclick="lineClicked(21); return false;" id="btnSubmit1" value="+" /></td>
+                                                <td style="width:10px;"></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="height:12px;"></td>
+                    </tr>
+                    <tr>
+                        <td style="width:200px;"></td>
+                        <td>
+                            <table style="height:50px;" class="groupBorder">
+                                <tr>
+                                    <td>
+                                        <table style="height:30px;">
+                                            <tr>
+                                                <td style="width:10px;"></td>
+                                                <td style="width:300px;font-weight:bold;color:black;">Payment grouping - US</td>
+                                                <td style="width:10px;font-size:24px;"><input type="submit" name="Rpt2" onclick="lineClicked(22); return false;" id="btnSubmit2" value="+" /></td>
+                                                <td style="width:10px;"></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="height:12px;"></td>
+                    </tr>
+                    <tr>
+                        <td style="width:200px;"></td>
+                        <td>
+                            <table style="height:50px;" class="groupBorder">
+                                <tr>
+                                    <td>
+                                        <table style="height:30px;">
+                                            <tr>
+                                                <td style="width:10px;"></td>
+                                                <td style="width:300px;font-weight:bold;color:black;">Commission per Tax Type</td>
+                                                <td style="width:10px;font-size:24px;"><input type="submit" name="Rpt3" onclick="lineClicked(23); return false;" id="btnSubmit3" value="+" /></td>
+                                                <td style="width:10px;"></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="height:12px;"></td>
+                    </tr>
+                    <tr>
+                        <td style="width:200px;"></td>
+                        <td>
+                            <table style="height:50px;" class="groupBorder">
+                                <tr>
+                                    <td>
+                                        <table style="height:30px;">
+                                            <tr>
+                                                <td style="width:10px;"></td>
+                                                <td style="width:300px;font-weight:bold;color:black;">Other Provincial Tax Rates (ISTA, WE and Fuel rates)</td>
+                                                <td style="width:10px;font-size:24px;"><input type="submit" name="Rpt4" onclick="lineClicked(24); return false;" id="btnSubmit4" value="+" /></td>
+                                                <td style="width:10px;"></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="height:12px;"></td>
+                    </tr>
+                    <tr>
+                        <td style="width:200px;"></td>
+                        <td>
+                            <table style="height:50px;" class="groupBorder">
+                                <tr>
+                                    <td>
+                                        <table style="height:30px;">
+                                            <tr>
+                                                <td style="width:10px;"></td>
+                                                <td style="width:300px;font-weight:bold;color:black;">Archive data</td>
+                                                <td style="width:10px;font-size:24px;"><input type="submit" name="Rpt5" onclick="lineClicked(25); return false;" id="btnSubmit5" value="+" /></td>
+                                                <td style="width:10px;"></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="height:12px;"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="height:12px;" colspan="2"></td>
+        </tr>
+        <tr>
+            <td style="width:80px;"></td>
+            <td>
+                <table class="groupBorder" style="width:520px;">
+                    <tr>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td colspan="6" style="text-align:left;font-weight:bold;">ATEXT code in MVC header line with respect to header Amount</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:left;font-weight:bold;">If amount <= </td>
+                                    <td style="text-align:left;"></td>
+                                    <td style="text-align:left;width:60px;font-weight:bold;">then use </td>
+                                    <td style="text-align:left;"></td>
+                                    <td style="text-align:left;font-weight:bold;">else use </td>
+                                    <td style="text-align:left;"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="text-align:left;font-weight:bold;">as ATEXT entry</td>
+                                    <td colspan="4"></td>
+                                </tr>
+                                <tr><td colspan="6" style="height:12px;"></td></tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="height:10px;" colspan="2"></td>
+        </tr>
+    </table>
+</div>
+    

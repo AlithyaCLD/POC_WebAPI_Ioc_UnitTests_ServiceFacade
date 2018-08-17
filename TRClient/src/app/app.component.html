@@ -1,0 +1,64 @@
+<div style="margin-left:30px;">
+    <table border="1">
+        <tr >
+            <td style="width:320px;vertical-align:top;">
+                <table style="background-color:lightgrey;">
+                    <tr><td colspan="3" style="text-align:center;font-weight:bold;font-size:17px;">Tax Remittance - Main Menu</td></tr>
+                    <tr><td colspan="3"></td>&nbsp;</tr>
+                    <tr><td class="standLabelBold">Available Periods</td>
+                        <td colspan=2>
+                        <select name="availPeriods" class="DropDownList" width="150px;min-width:150px;text-align:left;"
+                           [(ngModel)]="selectedPeriodId" (ngModelChange)="onChangeChanged($event)">
+                            <option *ngFor="let c of availPeriods" [value]="c.ValueId">{{c.TextDesc}}</option>
+                        </select>
+                        </td>
+                    </tr>
+                    <tr><td colspan="3"></td>&nbsp;</tr>
+                    <tr>
+                        <td class="standLabelBold">Load Monthly data</td>
+                        <td class="leftMenuArch"><a class="archnavL" id="al01" routerLink="LoadMthly">+</a></td>
+                        <td style="width:10px;"></td>
+                    </tr>
+                    <tr>
+                        <td class="standLabelBold">Tax Remittance Verification</td>
+                        <td class="leftMenuArch"><a class="archnavL" id="al02" routerLink="TaxRemVer">+</a> </td>
+                        <td ></td>
+                    </tr>
+                    <tr>
+                        <td class="standLabelBold">Process Tax Remittance - CA</td>
+                        <td class="leftMenuArch"><a class="archnavL" id="al03" routerLink="TaxRemCAD">+</a> </td>
+                        <td ></td>
+                    </tr>
+                    <tr>
+                        <td class="standLabelBold">Process Tax Remittance - US</td>
+                        <td class="leftMenuArch"><a class="archnavL" id="al04" routerLink="TaxRemUSD">+</a> </td>
+                        <td ></td>
+                    </tr>
+                    <tr>
+                        <td class="standLabelBold">Generate General Tax Report</td>
+                        <td class="leftMenuArch"><a class="archnavL" id="al05" routerLink="GenTaxRpt">+</a> </td>
+                        <td ></td>
+                    </tr>
+                    <tr>                       
+                        <td class="standLabelBold">Export Templates</td>
+                        <td class="leftMenuArch"><a class="archnavL" id="al06" routerLink="ExportTem">+</a> </td>
+                        <td></td>
+                    </tr>
+                    <tr>  
+                        <td class="standLabelBold">Tax Remittance - Administration</td>
+                        <td class="leftMenuArch"><a class="archnavL" id="al06" routerLink="TaxRemAdmin">+</a> </td>
+                        <td></td>
+                    </tr>
+                    <tr>  
+                        <td class="standLabelBold">Reconciliation</td>
+                        <td class="leftMenuArch"><a class="archnavL" id="al06" routerLink="Reconcili">+</a> </td>
+                        <td></td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width:40px;vertical-align:top;"></td>
+            <td id="mainpage" style="vertical-align:top;width:1104px;height:100%">
+                    <router-outlet></router-outlet>
+             </td>
+    </table>
+</div>

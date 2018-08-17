@@ -1,0 +1,205 @@
+﻿
+<div [@dialog] *ngIf="visible" class="dialog"  style="background-color:lightgrey;text-align:center;">
+      <table >
+        <tr><td colspan=3 style="height:5px;"><td></tr>
+        <tr>
+            <td style="width:5px;"></td>
+            <td>   
+                    <table style="height:700px;width:900px;" class="pageBorder">
+                            <tr> 
+                                    <td style="width:3px;"></td>  
+                                    <td>      
+                                        <table class="statusLine" >
+                                            <tr>
+                                                <td style="text-align: center;"><div [ngClass]="StatusClass">{{JobStatus}}</div></td>
+                                            </tr>
+                                            <tr>                                            
+                                                <td class="pageHdr" style="text-align: center;">ISTA(Account 502010) for period: {{CurrPeriod}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><button (click)="close()" aria-label="Close" class="dialog__close-btn" ><img  src="/src/assets/Exit.png" class="dtlimage" height="30" width="30"/></button></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td style="width:3px;"></td>
+                            </tr>       
+                        <tr>
+                            <td class="emptyLine" colspan="3"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <table>
+                                    <tr>
+                                        <td class="colHdrc1" style="width:90px;">Company:</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="colHdrc1">Month/Year:</td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="emptyLine" colspan="3"></td>
+                        </tr>
+                        <tr>
+                            <td style="width:6px;"></td>
+                            <td style="width:900px;">
+                                <table border="1" class="gridColors">
+                                    <tr class="gridHdr">
+                                        <td style="text-align:center;width:160px;">Tax Base Amount</td>
+                                        <td style="text-align:center;width:200px;">Z4 Entries - tax base</td>
+                                        <td style="text-align:center;width:120px;">Adjustment</td>
+                                        <td style="text-align:center;width:160px;">Tax Base to use</td>
+                                        <td style="text-align:center;width:180px;">Note</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;">$4,332,173.01</td>
+                                        <td style="text-align:right;">$0.00</td>
+                                        <td style="text-align:right;">$0.00</td>
+                                        <td style="text-align:right;">$4,332,173.01</td>
+                                        <td style="text-align:left;"></td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="emptyLine" colspan="3"></td>
+                        </tr>
+                        <tr>
+                            <td style="width:6px;"></td>
+                            <td>
+                                <table border="1" class="gridColors">
+                                    <tr class="gridHdr">
+                                        <td style="width:70px;">Province</td>
+                                        <td style="width:110px;">Composite Rate</td>
+                                        <td style="width:110px;">Calculated Tax</td>
+                                    </tr>
+                                    <tr>
+                                        <td>CANF</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>CAPE</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>CANS</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>CANB</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>CAQC</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>CAON</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>CAMB</td>
+                                        <td style="text-align:right;">0.6876%</td>
+                                        <td style="text-align:right;">($29,788.02)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>CASK</td>
+                                        <td style="text-align:right;">0.6638%</td>
+                                        <td style="text-align:right;">($28,756.96)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>CAAB</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>CABC</td>
+                                        <td style="text-align:right;">0.3331%</td>
+                                        <td style="text-align:right;">($28,756.96)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>CANT</td>
+                                        <td style="text-align:right;"></td>
+                                        <td style="text-align:right;"></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td style="text-align:right;font-weight:bold;">1.6845%</td>
+                                        <td style="text-align:right;font-weight:bold;">(72,975.45)</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td rowspan="2" style="vertical-align:top;">
+                                <table>
+                                    <tr>
+                                        <td style="width:6px;">&nbsp;</td>
+                                        <td style="text-align:left;">Previous Month</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width:6px;"></td>
+                                        <td style="text-align:left;">Journal Difference</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width:6px;"></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="emptyLine" colspan="3"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <table>
+                                    <tr>
+                                        <td style="width:22px;"></td>
+                                        <td style="width:100px;">SAP Accrual</td>
+                                        <td></td>
+                                        <td colspan="2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td class="colHdrl1" style="width:100px;" colspan="2"></td>
+                                        <td colspan="2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td class="colHdrl1" style="width:100px;" colspan="2">DataEntryComplete) Completed</td>
+                                        <td colspan="2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td class="colHdrl1" style="width:100px;" colspan="2"><input type="submit" name="btn1" width="180" value="View all documents"  formmethod="post" id="btnSubmit1" /></td>
+                                        <td colspan="2"></td>
+                                    </tr>
+                                </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:center;" colspan="3">
+                    <table style="width:100%;">
+                        <tr>
+                           <td>footer</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+                  </table>
+            </td>
+        </tr>
+        <tr><td colspan=3 style="height:5px;"><td></tr>
+      </table>
+    </div>
+
+

@@ -1,0 +1,194 @@
+﻿<div style="text-align:center;width:100%;background-color:lightgrey;height:600px;">
+        <table >
+            <tr>
+                <td style="height:5px;"><td>
+            </tr>
+            <tr>
+                <td style="width:15px;"></td>
+                <td>
+                <table class="pageBorder">
+                    <tr>
+                        <td><div [ngClass]="StatusClass">{{JobStatus}}</div></td>
+                    </tr>
+                    <tr><td class="pageHdr">Load monthly data for period: {{PeriodEnd}}</td></tr>
+                    <tr>
+                        <td style="height:4px;"></td>
+                    </tr>
+                    <tr>
+                        <td style="width:100%">
+                            <table style="width:100%" >
+                                <tr>
+                                    <td class="emptyLine"></td>
+                                </tr>
+                                <tr>
+                                    <td style="color:red">It is NOT necessary to import to the browser. These files will be imported on the server!</td>
+                                </tr>
+                                <tr>
+                                    <td style="color:red">Maybe we just display fullpathname and creation date??</td>
+                                </tr>
+                                <tr>
+                                    <td >
+                                        <table style="width:100%">
+                                            <tr>
+                                                <td style="width:20px;"></td>
+                                                <td colspan=2 class="standLabelBoldL">1 - Import FAGLFLEXT. (Account Balance &amp; Debit/Credit)</td>
+                                                <td></td>
+                                                <td class="standLabelBoldC">Done</td>
+                                                <td style="width:5px;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:20px;"></td>
+                                                <td style="text-align:left;"><input type="file" id="s1" class="button" /></td>
+                                                <td style="text-align:right;width:200px;"><button value="Import" (click)="ImportFile(1)" class="button" style="width:80px;">Import</button></td>
+                                                <td style="width:4px;"></td>
+                                                <td style="text-align: center;">
+                                                    <label class="cbContainer">
+                                                      <input type="checkbox" [(ngModel)]="chkBox1" />
+                                                      <span class="checkmark"></span> 
+                                                    </label>
+                                                </td>
+                                                <td style="width:5px;"></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="emptyLine" ></td>
+                                </tr>
+                                <tr>
+                                    <td >
+                                        <table style="width:100%" >
+                                            <tr>
+                                                <td style="width:20px;"></td>
+                                                <td colspan=5 class="standLabelBoldL" >2 - Import rpt253</td>                                                
+                                            </tr>
+                                            <tr>
+                                                <td style="width:20px;"></td>
+                                                <td style="text-align:left;"><input type="file" id="s2" class="button" /></td>
+                                                <td style="text-align:right;width:200px;"><button value="Import" (click)="ImportFile(2)" class="button" style="width:80px;">Import</button></td>
+                                                <td style="width:4px;"></td>
+                                                <td style="text-align: center;">
+                                                    <label class="cbContainer">
+                                                        <input type="checkbox" [(ngModel)]="chkBox2" />
+                                                        <span class="checkmark"></span> 
+                                                    </label>
+                                                    </td>
+                                                <td style="width:5px;"></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="emptyLine" ></td>
+                                </tr>
+                                <tr>
+                                    <td >
+                                        <table style="width:100%" >
+                                            <tr>
+                                                <td style="width:20px;"></td>
+                                                <td colspan=5 class="standLabelBoldL" >3 - Import BSET</td>                                             
+                                            </tr>
+                                            <tr>
+                                                <td style="width:20px;"></td>
+                                                <td style="text-align:left;"><input type="file" id="s3" class="button" /></td>
+                                                <td style="text-align:right;width:200px;"><button value="Import" (click)="ImportFile(3)" class="button" style="width:80px;">Import</button></td>
+                                                <td style="width:4px;"></td>
+                                                <td style="text-align: center;">
+                                                        <label class="cbContainer">
+                                                        <input type="checkbox" [(ngModel)]="chkBox3" />
+                                                        <span class="checkmark"></span> 
+                                                    </label>
+                                                </td>
+                                                <td style="width:5px;"></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr><td class="emptyLine"></td></tr>
+                                <tr>
+                                    <td >
+                                        <table style="width:100%" >
+                                            <tr>
+                                                <td style="width:20px;"></td>
+                                                <td colspan=2 class="standLabelBoldL" style="width:300px">4 - Process data</td>
+                                                <td style="text-align:right;width:200px;"><button value="Import" (click)="ImportFile(4)" class="button" style="width:80px;">Import</button></td>
+                                                <td style="width:2px;"></td>
+                                                <td style="text-align: center;">
+                                                        <label class="cbContainer">
+                                                        <input type="checkbox" [(ngModel)]="chkBox4" />
+                                                        <span class="checkmark"></span> 
+                                                    </label>
+                                                    </td>
+                                                <td style="width:5px;"></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="emptyLine" colspan="2"></td>
+                                </tr>
+                                <tr>
+                                    <td >
+                                        <table style="width:100%" >
+                                            <tr>
+                                                <td style="width:20px;"></td>
+                                                <td colspan=5 class="standLabelBoldL">5 - Import Fuel Report</td>                                                
+                                            </tr>
+                                            <tr>
+                                                <td style="width:20px;"></td>
+                                                <td style="text-align:left;"><input type="file" id="s5" class="button" /></td>
+                                                <td style="text-align:right;width:200px;"><button value="Import" (click)="ImportFile(5)" class="button" style="width:80px;">Import</button></td>
+                                                <td style="width:4px;"></td>
+                                                <td style="text-align: center;">
+                                                        <label class="cbContainer">
+                                                        <input type="checkbox" [(ngModel)]="chkBox5" />
+                                                        <span class="checkmark"></span> 
+                                                    </label>
+                                                    </td>
+                                                <td style="width:5px;"></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="emptyLine" ></td>
+                                </tr>
+                                <tr>
+                                    <td >
+                                        <table>
+                                            <tr>
+                                                <td>&nbsp;&nbsp;&nbsp;</td>
+                                                <td class="standLabelBoldL">Import Log</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:center;margin-left: 20px;">
+                                        <table class="gridColors">
+                                            <tr class="gridHdr">
+                                                <td style="width:100px;text-align:left;width:200px;">Import Type</td>
+                                                <td style="width:100px;text-align:left;width:200px;">Import Date</td>
+                                                <td style="width:200px;text-align:left;width:300px;">Import File Name</td>
+                                            </tr>
+                                            <tr *ngFor="let curr of availLogEntries; index as i; even as isEven; odd as isOdd" [ngStyle]="{'background-color': curr.IsOdd ? 'white' : 'lightgrey' }" >
+                                                    <td style="text-align:left;">{{curr.ImportType}}</td>
+                                                    <td style="text-align:left">{{curr.ImportDate}}</td>
+                                                    <td style="text-align:left;">{{curr.FileName}}</td>
+                                            </tr>   
+
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="emptyLine" ></td>
+                                </tr>
+                            </table>
+                </table>
+                </td>   
+            </tr>
+            <tr>
+                <td style="height:5px;"><td>
+            </tr>
+        </table>
+</div>

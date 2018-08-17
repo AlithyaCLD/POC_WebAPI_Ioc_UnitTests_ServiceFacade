@@ -1,0 +1,158 @@
+﻿<div [@dialog] *ngIf="visible" class="dialog"  style="background-color:lightgrey;text-align:center;">
+    <table >
+        <tr><td colspan=3 style="height:5px;"><td></tr>
+        <tr>
+            <td style="width:5px;"></td>
+            <td>
+                <table style="height:700px;width:900px;" class="pageBorder">
+                <tr> 
+                        <td style="width:3px;"></td>  
+                        <td>      
+                            <table class="statusLine" >
+                                <tr>
+                                    <td style="text-align: center;"><div [ngClass]="StatusClass">{{JobStatus}}</div></td>
+                                </tr>
+                                <tr>                                            
+                                    <td class="pageHdr" style="text-align: center;">PST/STATE TAX(502563) for period: {{CurrPeriod}}</td>
+                                </tr>
+                                <tr>
+                                    <td><button (click)="close()" aria-label="Close" class="dialog__close-btn" ><img  src="/src/assets/Exit.png" class="dtlimage" height="30" width="30"/></button></td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="width:3px;"></td>
+                </tr>          
+                <tr>
+                    <td class="emptyLine" colspan="3"></td>
+                </tr>
+                <tr>
+                    <td style="width:5px;"></td>
+                    <td style="text-align:Left; padding-top:2px;">
+                        <table style="width:100%;height:120px;padding-top:2px;">
+                            <tr>
+                                <td style="width:10px;"></td>
+                                <td class="standLabelBoldR" style="width:140px;">Company:</td>
+                                <td class="standDataLabelL" >{{TaxWrapperFrmDB.Company}}</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="standLabelBoldR">Month/Year:</td>
+                                <td class="standDataLabelL">{{CurrPeriod}}</td>
+                                
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="standLabelBoldR">Jurisdiction:</td>
+                                <td class="standDataLabelL">{{TaxWrapperFrmDB.JurisdictionCode}}</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="width:5px;"></td>
+                </tr>
+                <tr>
+                    <td style="width:5px;"></td>
+                    <td>
+                    <table class="gridColors">
+                        <tr class="gridHdr">
+                                <td style="text-align:center;">Tax Code</td>
+                                <td style="text-align:center;width:120px;">Tax Base</td>
+                                <td style="text-align:center;width:120px;">Tax Amount</td>                                        
+                                <td style="text-align:center;width:120px;">Adjustments</td>
+                                <td style="text-align:center;width:150px;">Tax Amt Calculated</td>
+                                <td style="text-align:center;width:180px;">Notes</td>
+                        </tr>
+                        <tr *ngFor="let curr of TaxWrapperFrmDB.AvailTaxItems; index as i; even as isEven; odd as isOdd" [ngStyle]="{'background-color': curr.IsOdd ? 'white' : 'lightgrey' }" >
+                                <td style="text-align:center;">{{curr.TaxCode}}</td>
+                                <td style="text-align:right">{{curr.TaxBase | number: '1.2'}}</td>
+                                <td style="text-align:right;">{{curr.TaxAmount | number: '1.2'}}</td>
+
+                                
+                                <td style="text-align:right;">{{curr.Adjustments | number: '1.2'}}</td>
+                                <td style="text-align:right;">{{curr.TaxAmtCalculated | number: '1.2'}}</td>
+                                <td style="text-align:left;">{{curr.Note}}</td>
+                        </tr>   
+                        <tr>
+                            <td colspan=4 style="text-align:right;background-color: white;color:black;">Gross Total</td>
+                            <td style="text-align:right;width:120px;background-color: white;color:black;font-weight: bold;">{{TotalTaxToPay | number: '1.2'}}</td>                                
+                            <td style="background-color: white;"></td>
+                        </tr>
+                    </table>
+                    </td>
+                    <td style="width:5px;"></td>
+                </tr>
+                <tr>
+                    <td class="emptyLine" colspan="3"></td>
+                </tr>
+                <tr>
+                    <td style="width:5px;"></td>
+                    <td>
+                            <table>
+                                    <tr>
+                                        <td style="width:30px;"></td>
+                                        <td style="width:190px;"></td>
+                                        <td class="standLabelBoldC" style="width:90px;">Calculated</td>
+                                        <td class="standLabelBoldC" style="width:110px;">Adjustment</td>
+                                        <td style="width:150px;"></td>
+                                        <td class="standLabelBoldL" style="width:210px;">Commission Note</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td class="standLabelBoldR">Vendor's commission</td>
+                                        <td>{{TaxWrapperFrmDB.CalcVendorCommission | number: '1.2'}}</td>
+                                        <td>{{AdjustmentTotal | number: '1.2'}}</td>
+                                        <td style="text-align: right;">{{AdjustmentGross | number: '1.2'}}</td>
+                                        <td style="text-align: left;">{{TaxWrapperFrmDB.CommissionNote}}</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3"></td>
+                                        <td colspan="2" style="text-align:right;">-------------------</td>
+                                        <td colspan="2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3"></td>
+                                        
+                                        <td class="standLabelBoldR">Total</td>
+                                        <td style="text-align: right;font-weight: bold;">{{GrandTotal | number: '6.2'}}</td>
+                                        <td colspan="2" ></td>
+                                    </tr>
+                                </table>
+                    </td>
+                    <td style="width:5px;"></td>
+                </tr>
+                <tr><td style="width:5px;"></td>
+                    <td style="width:300px;text-align: left;">  
+                                <label class="cbContainer"><span class="standLabelBoldL">Data entry complete</span>
+                                    <input type="checkbox" [(ngModel)]="TaxWrapperFrmDB.DataEntryComplete" />
+                                    <span class="checkmark"></span> 
+                                </label>
+                            </td>
+                    <td style="width:5px;"></td>
+                </tr>
+                <tr>
+                    <td style="width:5px;"></td>
+                    <td style="text-align:left;"><input type="submit" name="btn3" width="180" class="button" value="View all Docs"  id="btnSubmit3" /></td>
+                    <td style="width:5px;"></td>
+                </tr>
+                <tr>
+                    <td style="width:5px;"></td>
+                    <td style="text-align:center;vertical-align: bottom;">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:450px;">Footer</td>
+                                <td style="width:20px;"><img class="dtlimage"  src="/src/assets/Excel.png" height="30" width="30"/></td>
+                                <td style="width:5px;"></td>
+                                <td style="width:20px;"><img class="dtlimage" src="/src/assets/Print.png" height="30" width="30"/></td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="width:5px;"></td>
+                </tr>                      
+                </table>
+            </td>
+            <td style="width:5px;"></td>
+        </tr>
+        <tr><td colspan=3 style="height:5px;"><td></tr>
+    </table>
+    </div>

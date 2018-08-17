@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TAXREMITTANCESModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tblTax_Process">
+          <Key>
+            <PropertyRef Name="Auto_ID" />
+          </Key>
+          <Property Name="Auto_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MonthYear" Type="nvarchar" MaxLength="50" />
+          <Property Name="Company" Type="int" />
+          <Property Name="Account" Type="int" />
+          <Property Name="JurCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="TaxCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="TaxBaseAmtBSET" Type="money" />
+          <Property Name="TaxAmtBSET" Type="money" />
+          <Property Name="TaxBaseAdjustment" Type="money" />
+          <Property Name="TaxBaseTxCodeZ4" Type="money" />
+          <Property Name="TaxAmtAdjustment" Type="money" />
+          <Property Name="TaxAmtCalculated" Type="money" />
+          <Property Name="TaxPaid" Type="money" />
+          <Property Name="PST" Type="nvarchar" MaxLength="50" />
+          <Property Name="Ratio" Type="nvarchar" MaxLength="50" />
+          <Property Name="CompositeRate" Type="nvarchar" MaxLength="50" />
+          <Property Name="Note" Type="nvarchar(max)" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="DateCompleted" Type="datetime" />
+          <Property Name="DateSubmitted" Type="datetime" />
+          <Property Name="ValidationCompleted" Type="bit" />
+          <Property Name="CalculatedAmount" Type="money" />
+          <Property Name="502012_Completed" Type="bit" />
+          <Property Name="TaxNotApplied" Type="money" />
+          <Property Name="HasBeenCalculated" Type="bit" />
+          <Property Name="Timestamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityContainer Name="TAXREMITTANCESModelStoreContainer">
+          <EntitySet Name="tblTax_Process" EntityType="Self.tblTax_Process" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TAXREMITTANCESModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tblTax_Process">
+          <Key>
+            <PropertyRef Name="Auto_ID" />
+          </Key>
+          <Property Name="Auto_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MonthYear" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Company" Type="Int32" />
+          <Property Name="Account" Type="Int32" />
+          <Property Name="JurCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TaxCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TaxBaseAmtBSET" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="TaxAmtBSET" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="TaxBaseAdjustment" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="TaxBaseTxCodeZ4" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="TaxAmtAdjustment" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="TaxAmtCalculated" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="TaxPaid" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="PST" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Ratio" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CompositeRate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DateCompleted" Type="DateTime" Precision="3" />
+          <Property Name="DateSubmitted" Type="DateTime" Precision="3" />
+          <Property Name="ValidationCompleted" Type="Boolean" />
+          <Property Name="CalculatedAmount" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="C502012_Completed" Type="Boolean" />
+          <Property Name="TaxNotApplied" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="HasBeenCalculated" Type="Boolean" />
+          <Property Name="Timestamp" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityContainer Name="TAXREMITTANCESEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tblTax_Process" EntityType="Self.tblTax_Process" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TAXREMITTANCESModelStoreContainer" CdmEntityContainer="TAXREMITTANCESEntities">
+          <EntitySetMapping Name="tblTax_Process">
+            <EntityTypeMapping TypeName="TAXREMITTANCESModel.tblTax_Process">
+              <MappingFragment StoreEntitySet="tblTax_Process">
+                <ScalarProperty Name="Auto_ID" ColumnName="Auto_ID" />
+                <ScalarProperty Name="MonthYear" ColumnName="MonthYear" />
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="JurCode" ColumnName="JurCode" />
+                <ScalarProperty Name="TaxCode" ColumnName="TaxCode" />
+                <ScalarProperty Name="TaxBaseAmtBSET" ColumnName="TaxBaseAmtBSET" />
+                <ScalarProperty Name="TaxAmtBSET" ColumnName="TaxAmtBSET" />
+                <ScalarProperty Name="TaxBaseAdjustment" ColumnName="TaxBaseAdjustment" />
+                <ScalarProperty Name="TaxBaseTxCodeZ4" ColumnName="TaxBaseTxCodeZ4" />
+                <ScalarProperty Name="TaxAmtAdjustment" ColumnName="TaxAmtAdjustment" />
+                <ScalarProperty Name="TaxAmtCalculated" ColumnName="TaxAmtCalculated" />
+                <ScalarProperty Name="TaxPaid" ColumnName="TaxPaid" />
+                <ScalarProperty Name="PST" ColumnName="PST" />
+                <ScalarProperty Name="Ratio" ColumnName="Ratio" />
+                <ScalarProperty Name="CompositeRate" ColumnName="CompositeRate" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="DateCompleted" ColumnName="DateCompleted" />
+                <ScalarProperty Name="DateSubmitted" ColumnName="DateSubmitted" />
+                <ScalarProperty Name="ValidationCompleted" ColumnName="ValidationCompleted" />
+                <ScalarProperty Name="CalculatedAmount" ColumnName="CalculatedAmount" />
+                <ScalarProperty Name="C502012_Completed" ColumnName="502012_Completed" />
+                <ScalarProperty Name="TaxNotApplied" ColumnName="TaxNotApplied" />
+                <ScalarProperty Name="HasBeenCalculated" ColumnName="HasBeenCalculated" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

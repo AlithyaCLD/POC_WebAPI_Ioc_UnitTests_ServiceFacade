@@ -1,0 +1,152 @@
+﻿
+<div style="background-color:lightgray;">
+    <table >
+        <tr><td style="height:5px;"><td></tr>
+        <tr>
+            <td style="width:5px;"></td>
+            <td>
+                <table class="pageBorder">
+                    <tr>
+                        <td colspan="3" style="font-weight:bolder;text-align:center;">Tax Remittance - Selection / Check Form  US</td>
+                    </tr>
+                    <tr>
+                        <td class="emptyLine" colspan="3"></td>
+                    </tr>
+                    <tr>
+                        <td style="width:5px;"></td>
+                        <td style="text-align: left;">
+                            <table>
+                            <tr>
+                                <td style="width:290px;">Month/Year(e.g. MM/YYYY)</td>
+                                <td>{{PeriodEnd}}</td>                              
+                            </tr>
+                            </table>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                            <td class="emptyLine" colspan="3"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <table style="width:700px;">
+                                <tr>
+                                    <td style="width:4px;"></td>
+                                    <td>
+                                        <table class="gridColors">
+                                            <tr class="gridHdr">
+                                                <td style="width:150px;text-align:center;">Tax Type</td>
+                                                <td style="width:100px;text-align:center;">Fequency</td>
+                                                <td style="width:100px;text-align:center;">Due Date</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:100px;text-align:left;"><a href="" id="GetDtl1" onclick="lineClicked('2010Illnois'); return false;">2010 Illnois</a></td>
+                                                <td style="width:100px;text-align:center;">12</td>
+                                                <td style="width:100px;text-align:center;">-$173.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:100px;text-align:left;"><a href="" id="GetDtl2" onclick="lineClicked('2010Indiana'); return false;">2010 Indiana</a></td>
+                                                <td style="width:100px;text-align:center;">1</td>
+                                                <td style="width:100px;text-align:center;">2019/01/20</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:100px;text-align:left;"><a href="" id="GetDtl3" onclick="lineClicked('2010Michigan'); return false;">2010 Michigan</a></td>
+                                                <td style="width:100px;text-align:center;">12</td>
+                                                <td style="width:100px;text-align:center;">-$133,949.20</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:100px;text-align:left;"><a href="" id="GetDtl4" onclick="lineClicked('2010MichiganYearly'); return false;">2010 - Yearly</a></td>
+                                                <td style="width:100px;text-align:center;">1</td>
+                                                <td style="width:100px;text-align:center;">2019/01/28</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:100px;text-align:left;"><a href="" id="GetDtl4" onclick="lineClicked('2010Ohio'); return false;">2010 Ohio</a></td>
+                                                <td style="width:100px;text-align:center;">4</td>
+                                                <td style="width:100px;text-align:center;">-$4,204.87</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:100px;text-align:left;"><a href="" id="GetDtl4" onclick="lineClicked('2020Minnesota'); return false;">2010 Minnesota</a></td>
+                                                <td style="width:100px;text-align:center;">4</td>
+                                                <td style="width:100px;text-align:center;">-$4,204.87</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td style="width:4px;"></td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td ></td>
+                    </tr>
+                    <tr>
+                       <td class="emptyLine" colspan="3"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td style="width:5px;"></td>
+                                    <td style="font-weight:bold;"><input type="submit" name="btn1" width="150" value="Manage Advanced Payments"  class="button" id="btnSubmit1" /></td>
+                                    <td style="width:5px;"></td>
+                                    <td style="font-weight:bold;"><input type="submit" name="btn2" width="150" value="Generate MCV" id="btnSubmit2" class="button"  /></td>
+                                    <td style="width:5px;"></td>
+                                    <td style="font-weight:bold;"><input type="submit" name="btn3" width="150" value="Reset Color" class="button"  id="btnSubmit3" /></td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td ></td>
+                    </tr>
+                    <tr>
+                        <td class="emptyLine" colspan="3"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td style="width:660px;">
+                            <fieldset class="genTaxRpt1">                                           
+                                <table>
+                                    <tr>
+                                        <td colspan="4" style="height:6px;line-height:6px"></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width:60px;font-weight:bold;">Legend:</td>
+                                        <td style="background-color:white;border-top:solid;border-left:solid;border-right:solid;border-color:black;border-width:.5px;width:80px;"></td>
+                                        <td style="width:6px;"></td>
+                                        <td>Not Done Yet</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td style="background-color:red;border-left:solid;border-right:solid;border-color:black;border-width:.5px;">Verify</td>
+                                        <td style="width:6px;"></td>
+                                        <td>Need to verify documents with more than 25% of variance</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td style="background-color:yellow;border-left:solid;border-right:solid;border-color:black;border-width:.5px;">Completed</td>
+                                        <td style="width:6px;"></td>
+                                        <td>Tax calculated</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td style="background-color:lawngreen;border-left:solid;border-right:solid;border-color:black;border-bottom:solid;border-width:.5px;">Submitted</td>
+                                        <td style="width:6px;"></td>
+                                        <td>MVC generated</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" style="height:6px;"></td>
+                                    </tr>
+                                </table>
+                            </fieldset>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="emptyLine" colspan="3"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr><td style="height:5px;" colspan="3"><td></tr>
+    </table>
+</div>
+   

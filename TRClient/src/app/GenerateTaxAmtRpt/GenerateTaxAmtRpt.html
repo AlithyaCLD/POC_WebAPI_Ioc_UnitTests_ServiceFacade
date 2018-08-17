@@ -1,0 +1,163 @@
+﻿<div>
+<form>
+    <table style="width:600px;background-color:rgb(226, 226, 226);">
+        <tr>
+            
+            <td colspan="2" class="pageHdr" >Generate Tax Amount Report</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="height:12px;"></td>
+        </tr>
+        <tr>
+            <td style="width:100px;"></td>
+            <td>
+                <table>
+                    <tr>
+                        <td>
+                            <fieldset class="genTaxRpt1">
+                                <legend class="legend1">Step 1....</legend>
+                                <table style="vertical-align:top;width:400px;">
+                                    <tr>
+                                        <td style="width:12px;"></td>
+                                        <td colspan="2" class="standLabelBoldL">Please select a tax Type or a Voucher I.D.</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width:12px;"></td>
+                                        <td class="standLabelBoldL">Tax Type</td>
+                                        <td><select name="availTaxTypes" class="DropDownList" width="150px;min-width:150px;text-align:left;"
+                                            [(ngModel)]="selectedTaxType" (ngModelChange)="onChangeChanged($event,4)">
+                                             <option *ngFor="let c of availTaxTypes" [value]="c.ValueId">{{c.TextDesc}}</option>
+                                         </select></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width:12px;"></td>
+                                        <td class="standLabelBoldC">OR</td>
+                                        <td></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td style="width:12px;"></td>
+                                        <td class="standLabelBoldL">Voucher I.D.</td>
+                                        <td><select name="availVauchers" class="DropDownList" width="150px;min-width:150px;text-align:left;"
+                                            [(ngModel)]="selectedVaucher" (ngModelChange)="onChangeChanged($event,5)">
+                                             <option *ngFor="let c of availVauchers" [value]="c.ValueId">{{c.TextDesc}}</option>
+                                         </select></td>
+                                    </tr>
+                                    <tr><td colspan="3" style="height:12px;"></td></tr>
+                                </table>
+                            </fieldset>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="height:20px;"></td>
+        </tr>
+        <tr>
+            <td style="width:100px;"></td>
+            <td>
+                <table>
+                    <tr>
+                        <td>
+                            <fieldset class="genTaxRpt1">
+                                <legend class="legend1">Step 2....</legend>
+                                <table style="vertical-align:top;width:400px;">
+                                    <tr>
+                                        <td style="width:12px;"></td>
+                                        <td colspan="2" class="standLabelBoldL">Please select Start and end Dates for the report</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width:12px;"></td>
+                                        <td class="standLabelBoldL">Start Period</td>
+                                        <td><select name="availStartPeriods" class="DropDownList" width="150px;min-width:150px;text-align:left;"
+                                            [(ngModel)]="selectedStartPeriodId" (ngModelChange)="onChangeChanged($event,2)">
+                                             <option *ngFor="let c of availStartPeriods" [value]="c.ValueId">{{c.TextDesc}}</option>
+                                         </select></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width:12px;"></td>
+                                        <td class="standLabelBoldC">OR</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width:12px;"></td>
+                                        <td class="standLabelBoldL">End Period</td>
+                                        <td><select name="availEndPeriods" class="DropDownList" width="150px;min-width:150px;text-align:left;"
+                                            [(ngModel)]="selectedEndPeriodId" (ngModelChange)="onChangeChanged($event,3)">
+                                             <option *ngFor="let c of availEndPeriods" [value]="c.ValueId">{{c.TextDesc}}</option>
+                                         </select></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" style="height:12px;"></td>
+                                    </tr>
+                                </table>
+                            </fieldset>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="height:20px;"></td>
+        </tr>
+        <tr>
+            <td style="width:100px;"></td>
+            <td>
+                <table>
+                    <tr>
+                        <td>
+                            <fieldset class="genTaxRpt1">
+                                <legend class="legend1">Step 3....</legend>
+                                <table style="vertical-align:top;width:400px;">
+                                    <tr>
+                                        <td colspan="2" class="standLabelBoldL">Please select the sort order of the report</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="standLabelBoldL"><input name="group1" type="radio" value="1"> Period</td>
+                                        <td class="standLabelBoldL"><input name="group1" type="radio" value="2"> Tax Code</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" style="height:12px;"></td>
+                                    </tr>
+                                </table>
+                            </fieldset>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="height:12px;"></td>
+        </tr>
+        <tr>
+            <td style="width:100px;"></td>
+            <td>
+                <table>
+                    <tr>
+                        <td>
+                            <fieldset class="genTaxRpt1">
+                                <legend class="legend1">Step 4....</legend>
+                                <table style="vertical-align:top;width:400px;">
+                                    <tr>
+                                        <td style="width:12px;"></td>
+                                        <td style="width:12px;text-align:center;"><input type="submit" name="btn3" width="150" value="Generate Report" id="btnSubmit1" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" style="height:12px;"></td>
+                                    </tr>
+                                </table>
+                            </fieldset>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="height:12px;"></td>
+        </tr>
+
+    </table>
+</form>
+</div>
+ 
