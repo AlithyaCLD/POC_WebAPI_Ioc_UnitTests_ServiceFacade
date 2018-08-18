@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using TR.DataLayer.Interfaces.Repositories;
 using TRBusinessLayer.DataObjects;
-using TRDataLayer.Interfaces.Repositories;
 
 namespace TRServer.Tests.MockRepositories
 {

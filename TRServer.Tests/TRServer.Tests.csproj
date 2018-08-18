@@ -35,15 +35,28 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.4.3.1\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Moq, Version=4.9.0.0, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <HintPath>..\packages\Moq.4.9.0\lib\net45\Moq.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Net.Http.Formatting, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.6\lib\net45\System.Net.Http.Formatting.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.4.0\lib\net461\System.ValueTuple.dll</HintPath>
     </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Http, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -73,9 +86,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TRBusinessLayer\TRBusinessLayer.csproj">
+    <ProjectReference Include="..\TR.ServiceLayer.Implementation\TR.ServiceLayer.Implementation.csproj">
+      <Project>{12B562C3-7162-4214-8D61-656947BE1BAA}</Project>
+      <Name>TR.ServiceLayer.Implementation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TRBusinessLayer\TR.BusinessLayer.Domain.csproj">
       <Project>{318c1a39-402d-473c-ad64-d45a23d6377d}</Project>
-      <Name>TRBusinessLayer</Name>
+      <Name>TR.BusinessLayer.Domain</Name>
     </ProjectReference>
     <ProjectReference Include="..\TRDataLayer.Interfaces\TR.DataLayer.Interfaces.csproj">
       <Project>{99c8b218-9c1d-447b-b6f0-fd75883b3252}</Project>
@@ -84,6 +101,10 @@
     <ProjectReference Include="..\TRServer\TRServer.csproj">
       <Project>{d035b65d-5d26-428e-abda-a43807a4dfef}</Project>
       <Name>TRServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TRServiceLayer.Interfaces\TR.ServiceLayer.Interfaces.csproj">
+      <Project>{E79B73B3-0C50-4D7A-893E-D2529948D38B}</Project>
+      <Name>TR.ServiceLayer.Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

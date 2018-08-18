@@ -7,8 +7,8 @@
     <ProjectGuid>{99C8B218-9C1D-447B-B6F0-FD75883B3252}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TRDataLayer.Interfaces</RootNamespace>
-    <AssemblyName>TRDataLayer.Interfaces</AssemblyName>
+    <RootNamespace>TR.DataLayer.Interfaces</RootNamespace>
+    <AssemblyName>TR.DataLayer.Interfaces</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,7 +30,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -40,18 +47,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Generic\IDataContext.cs" />
+    <Compile Include="Generic\IRepository.cs" />
+    <Compile Include="Generic\IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\IDropdownRepository.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TRBusinessLayer\TRBusinessLayer.csproj">
+    <ProjectReference Include="..\TRBusinessLayer\TR.BusinessLayer.Domain.csproj">
       <Project>{318c1a39-402d-473c-ad64-d45a23d6377d}</Project>
-      <Name>TRBusinessLayer</Name>
+      <Name>TR.BusinessLayer.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TREntityModel\TREntityModel.csproj">
+    <ProjectReference Include="..\TREntityModel\TR.BusinessLayer.Entities.csproj">
       <Project>{5886da6b-0c95-4f39-95ae-34eef0d1655d}</Project>
-      <Name>TREntityModel</Name>
+      <Name>TR.BusinessLayer.Entities</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

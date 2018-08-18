@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TREntityModel
+namespace TR.BusinessLayer.Entities
 {
     using System;
     using System.Collections.Generic;

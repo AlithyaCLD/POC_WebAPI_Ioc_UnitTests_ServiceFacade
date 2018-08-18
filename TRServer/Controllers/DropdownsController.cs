@@ -1,47 +1,20 @@
 ﻿using System;
 using System.Web.Http;
 using System.Web.Http.Description;
-
-using TRBusinessLayer.BusinessLayer;
+using TR.DataLayer.Interfaces.Repositories;
 using TRBusinessLayer.DataObjects;
-using TRDataLayer.Interfaces.Repositories;
 
 namespace TRServer.Controllers
 {
     [RoutePrefix("api/Dropdowns")]   // AVAILPERIODS
-    public class DropdownsController : BaseController
+    public class DropdownsController : ApiController
     {
         private IDropdownRepository _repository;
+        private readonly IFacade _facade;
 
-        public DropdownsController(IDropdownRepository repository)
+        public DropdownsController(IFacade facade)
         {
-            this._repository = repository;
-        }
-
-        [HttpGet]
-        [Route("{fromPeriodEnd}/{typeOfDropDown}")]
-        [ResponseType(typeof(DropDownsWrapper))]
-
-        public DropDownsWrapper GetDropDowns(string fromPeriodEnd,string typeOfDropDown)
-        {
-
-            var availTypes = this._repository.GetAvailTaxTypes();
-
-            Facade facade = new Facade();
-            
-            try
-            {
-                var dt = ConvertToDateTime(fromPeriodEnd);
-                return facade.GetGenericDropDown(typeOfDropDown, dt);
-            }
-            catch (Exception ex)
-            {
-                DropDownsWrapper dropDownsWrapper = new DropDownsWrapper { hasAnError = true };
-                dropDownsWrapper.errMessage = GetAdminMsg;
-                logger.Error("GetDropDowns: " + ex.Message);
-                logger.Error("GetDropDowns: " + ex.StackTrace);
-                return dropDownsWrapper;
-            }
+            _facade = facade;
         }
 
         [Route("{Periods}")]

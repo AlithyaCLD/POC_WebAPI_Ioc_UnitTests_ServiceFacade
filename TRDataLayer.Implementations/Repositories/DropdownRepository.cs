@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using TR.BusinessLayer.Entities;
+using TR.DataLayer.Interfaces.Repositories;
 using TRBusinessLayer.DataObjects;
-using TRDataLayer.Interfaces.Repositories;
-using TREntityModel;
 
 namespace TRDataLayer.Implementations.Repositories
 {

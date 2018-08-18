@@ -25,6 +25,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <TargetFrameworkProfile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -147,8 +148,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\DropdownsController.cs" />
-    <Compile Include="Controllers\ProcessTaxCAController.cs" />
-    <Compile Include="Controllers\TaxAmountRptController.cs" />
+    <Compile Include="Controllers\IFacade.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -179,9 +179,9 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TRBusinessLayer\TRBusinessLayer.csproj">
+    <ProjectReference Include="..\TRBusinessLayer\TR.BusinessLayer.Domain.csproj">
       <Project>{318c1a39-402d-473c-ad64-d45a23d6377d}</Project>
-      <Name>TRBusinessLayer</Name>
+      <Name>TR.BusinessLayer.Domain</Name>
     </ProjectReference>
     <ProjectReference Include="..\TRDataLayer.Implementations\TR.DataLayer.Implementations.csproj">
       <Project>{cd496dde-a409-42f5-aa21-6473564f66fa}</Project>
@@ -191,9 +191,13 @@
       <Project>{99c8b218-9c1d-447b-b6f0-fd75883b3252}</Project>
       <Name>TR.DataLayer.Interfaces</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TREntityModel\TREntityModel.csproj">
+    <ProjectReference Include="..\TREntityModel\TR.BusinessLayer.Entities.csproj">
       <Project>{5886da6b-0c95-4f39-95ae-34eef0d1655d}</Project>
-      <Name>TREntityModel</Name>
+      <Name>TR.BusinessLayer.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TRServiceLayer.Interfaces\TR.ServiceLayer.Interfaces.csproj">
+      <Project>{e79b73b3-0c50-4d7a-893e-d2529948d38b}</Project>
+      <Name>TR.ServiceLayer.Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

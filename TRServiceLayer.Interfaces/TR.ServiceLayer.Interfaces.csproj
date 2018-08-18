@@ -40,11 +40,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\IDropDownService.cs" />
+    <Compile Include="Adapters\IProxyFactoryAdapter.cs" />
+    <Compile Include="Generic\IDropDownService.cs" />
+    <Compile Include="Generic\IService.cs" />
     <Compile Include="IFacade.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\TRBusinessLayer\TR.BusinessLayer.Domain.csproj">
+      <Project>{318C1A39-402D-473C-AD64-D45A23D6377D}</Project>
+      <Name>TR.BusinessLayer.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using TRBusinessLayer.DataObjects;
 
-namespace TRDataLayer.Interfaces.Repositories
+namespace TR.DataLayer.Interfaces.Repositories
 {
     public interface IDropdownRepository
     {
         List<DropDownItem> GetAvailVauchers();
         List<DropDownItem> GetAvailTaxTypes();
-
         List<DropDownItem> GetPeriods();
     }
 }

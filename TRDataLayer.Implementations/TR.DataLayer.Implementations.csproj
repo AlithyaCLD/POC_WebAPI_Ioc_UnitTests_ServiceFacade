@@ -49,21 +49,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\DynamicQueryable.cs" />
+    <Compile Include="Common\ExpandableQuery.cs" />
+    <Compile Include="Common\ExpressionExpander.cs" />
+    <Compile Include="Common\ExpressionVisitor.cs" />
+    <Compile Include="Common\Extensions.cs" />
+    <Compile Include="Generic\Repository.cs" />
+    <Compile Include="Generic\UnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\DropdownRepository.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TRBusinessLayer\TRBusinessLayer.csproj">
+    <ProjectReference Include="..\TRBusinessLayer\TR.BusinessLayer.Domain.csproj">
       <Project>{318c1a39-402d-473c-ad64-d45a23d6377d}</Project>
-      <Name>TRBusinessLayer</Name>
+      <Name>TR.BusinessLayer.Domain</Name>
     </ProjectReference>
     <ProjectReference Include="..\TRDataLayer.Interfaces\TR.DataLayer.Interfaces.csproj">
       <Project>{99c8b218-9c1d-447b-b6f0-fd75883b3252}</Project>
       <Name>TR.DataLayer.Interfaces</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TREntityModel\TREntityModel.csproj">
+    <ProjectReference Include="..\TREntityModel\TR.BusinessLayer.Entities.csproj">
       <Project>{5886da6b-0c95-4f39-95ae-34eef0d1655d}</Project>
-      <Name>TREntityModel</Name>
+      <Name>TR.BusinessLayer.Entities</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

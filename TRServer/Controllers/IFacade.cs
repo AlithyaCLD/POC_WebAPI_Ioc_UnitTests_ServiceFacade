@@ -1,10 +1,10 @@
 ﻿using TR.BusinessLayer.Domain.Common;
 using TR.ServiceLayer.Interfaces.Generic;
 
-namespace TR.ServiceLayer.Interfaces
+namespace TRServer.Controllers
 {
     public interface IFacade
     {
-        IDropDownService DropDownService { get; }
+        IDropDownService MonthlyPeriodService { get; }
     }
 }

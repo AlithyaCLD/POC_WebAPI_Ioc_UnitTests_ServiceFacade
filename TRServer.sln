@@ -1,15 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TRServer", "TRServer\TRServer.csproj", "{D035B65D-5D26-428E-ABDA-A43807A4DFEF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TRBusinessLayer", "TRBusinessLayer\TRBusinessLayer.csproj", "{318C1A39-402D-473C-AD64-D45A23D6377D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TR.BusinessLayer.Domain", "TRBusinessLayer\TR.BusinessLayer.Domain.csproj", "{318C1A39-402D-473C-AD64-D45A23D6377D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TRServer.Tests", "TRServer.Tests\TRServer.Tests.csproj", "{790C978B-0CCC-4CE0-A4E5-0050A62A6171}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TREntityModel", "TREntityModel\TREntityModel.csproj", "{5886DA6B-0C95-4F39-95AE-34EEF0D1655D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TR.BusinessLayer.Entities", "TREntityModel\TR.BusinessLayer.Entities.csproj", "{5886DA6B-0C95-4F39-95AE-34EEF0D1655D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TR.DataLayer.Interfaces", "TRDataLayer.Interfaces\TR.DataLayer.Interfaces.csproj", "{99C8B218-9C1D-447B-B6F0-FD75883B3252}"
 EndProject

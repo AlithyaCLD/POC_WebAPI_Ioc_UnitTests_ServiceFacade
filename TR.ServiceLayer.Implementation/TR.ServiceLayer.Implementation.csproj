@@ -40,15 +40,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\DropDownService.cs" />
-    <Compile Include="Common\GetTaxAmountRpt.cs" />
-    <Compile Include="Common\LoadMonthly.cs" />
-    <Compile Include="Common\ProcessTaxCA.cs" />
+    <Compile Include="Generic\DropDownService.cs" />
+    <Compile Include="Generic\GetTaxAmountRpt.cs" />
+    <Compile Include="Generic\LoadMonthly.cs" />
+    <Compile Include="Generic\ProcessTaxCA.cs" />
     <Compile Include="Facade.cs" />
+    <Compile Include="Generic\Service.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="..\TRBusinessLayer\TR.BusinessLayer.Domain.csproj">
+      <Project>{318C1A39-402D-473C-AD64-D45A23D6377D}</Project>
+      <Name>TR.BusinessLayer.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TRDataLayer.Interfaces\TR.DataLayer.Interfaces.csproj">
+      <Project>{99C8B218-9C1D-447B-B6F0-FD75883B3252}</Project>
+      <Name>TR.DataLayer.Interfaces</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TRServiceLayer.Interfaces\TR.ServiceLayer.Interfaces.csproj">
       <Project>{e79b73b3-0c50-4d7a-893e-d2529948d38b}</Project>
       <Name>TR.ServiceLayer.Interfaces</Name>

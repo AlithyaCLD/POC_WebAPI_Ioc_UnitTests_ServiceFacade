@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5886DA6B-0C95-4F39-95AE-34EEF0D1655D}</ProjectGuid>
+    <ProjectGuid>{318C1A39-402D-473C-AD64-D45A23D6377D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TREntityModel</RootNamespace>
-    <AssemblyName>TREntityModel</AssemblyName>
+    <RootNamespace>TR.BusinessLayer.Domain</RootNamespace>
+    <AssemblyName>TR.BusinessLayer.Domain</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -51,50 +52,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\IDropDownable.cs" />
+    <Compile Include="Common\TextValue.cs" />
+    <Compile Include="DataObjects\AbstractDto.cs" />
+    <Compile Include="DataObjects\CarbonFuelTax.cs" />
+    <Compile Include="DataObjects\CarbonFuelTaxWrapper.cs" />
+    <Compile Include="DataObjects\Constants.cs" />
+    <Compile Include="DataObjects\FuelTaxDtl.cs" />
+    <Compile Include="DataObjects\LoadMonthlyWrapper.cs" />
+    <Compile Include="DataObjects\LogEntry.cs" />
+    <Compile Include="DataObjects\MonthYearItem.cs" />
+    <Compile Include="DataObjects\TaxItem.cs" />
+    <Compile Include="DataObjects\TaxRemCA.cs" />
+    <Compile Include="DataObjects\TaxReportWrapper.cs" />
+    <Compile Include="DataObjects\DropDownItem.cs" />
+    <Compile Include="DataObjects\dropDownsWrapper.cs" />
+    <Compile Include="DataObjects\TaxWrapper.cs" />
+    <Compile Include="Common\PagedList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="tblTax_Process.cs">
-      <DependentUpon>TRModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TRModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TRModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TRModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TRModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TRModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TRModel.edmx</DependentUpon>
-    </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <EntityDeploy Include="TRModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>TRModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.Config" />
     <None Include="packages.config" />
-    <None Include="TRModel.edmx.diagram">
-      <DependentUpon>TRModel.edmx</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="TRModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TRModel.edmx</DependentUpon>
-      <LastGenOutput>TRModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="TRModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TRModel.edmx</DependentUpon>
-      <LastGenOutput>TRModel.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
