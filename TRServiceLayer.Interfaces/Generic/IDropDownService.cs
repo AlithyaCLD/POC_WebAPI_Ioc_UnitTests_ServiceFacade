@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
-using TR.BusinessLayer.Domain.Common;
+using TRBusinessLayer.DataObjects;
 
 namespace TR.ServiceLayer.Interfaces.Generic
 {
-    public interface IDropDownService : IService<TextValue>
+    public interface IDropDownService : IService<DropDownItem>
     {
-        IList<TextValue> GetMonthlyPeriods();
+        IList<DropDownItem> GetMonthlyPeriods();
     }
 }

@@ -11,18 +11,18 @@ namespace TRDataLayer.Implementations.Repositories
         public List<DropDownItem> GetAvailTaxTypes()
         {
             List<DropDownItem> testData = new List<DropDownItem>();
-            testData.Add(new DropDownItem { TextDesc = "TPS", ValueId = "1" });
-            testData.Add(new DropDownItem { TextDesc = "TVQ", ValueId = "2" });
+            testData.Add(new DropDownItem { Text = "TPS", Value = "1" });
+            testData.Add(new DropDownItem { Text = "TVQ", Value = "2" });
             return testData;
         }
 
         public List<DropDownItem> GetAvailVauchers()
         {
             List<DropDownItem> testData = new List<DropDownItem>();
-            testData.Add(new DropDownItem { TextDesc = "001", ValueId = "1" });
-            testData.Add(new DropDownItem { TextDesc = "002", ValueId = "2" });
-            testData.Add(new DropDownItem { TextDesc = "003", ValueId = "3" });
-            testData.Add(new DropDownItem { TextDesc = "004", ValueId = "4" });
+            testData.Add(new DropDownItem { Text = "001", Value = "1" });
+            testData.Add(new DropDownItem { Text = "002", Value = "2" });
+            testData.Add(new DropDownItem { Text = "003", Value = "3" });
+            testData.Add(new DropDownItem { Text = "004", Value = "4" });
             return testData;
         }
 
@@ -30,7 +30,7 @@ namespace TRDataLayer.Implementations.Repositories
         {
             TAXREMITTANCESEntities dbContext = new TAXREMITTANCESEntities();
             List<DropDownItem> items = new List<DropDownItem>();
-            dbContext.tblTax_Process.AsNoTracking().Select(x => x.MonthYear).Distinct().ToList().ForEach(x => items.Add(new DropDownItem(){ TextDesc = x , ValueId = x}));
+            dbContext.tblTax_Process.AsNoTracking().Select(x => x.MonthYear).Distinct().ToList().ForEach(x => items.Add(new DropDownItem(){ Text = x , Value = x}));
 
             return items;
         }
