@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TR.ServiceLayer.Interfaces"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TR.ServiceLayer.Implementation", "TR.ServiceLayer.Implementation\TR.ServiceLayer.Implementation.csproj", "{12B562C3-7162-4214-8D61-656947BE1BAA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAngular", "WebAngular\WebAngular.csproj", "{1AFC1729-327F-490F-9DE8-0B5AB445E260}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{12B562C3-7162-4214-8D61-656947BE1BAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12B562C3-7162-4214-8D61-656947BE1BAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12B562C3-7162-4214-8D61-656947BE1BAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AFC1729-327F-490F-9DE8-0B5AB445E260}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AFC1729-327F-490F-9DE8-0B5AB445E260}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AFC1729-327F-490F-9DE8-0B5AB445E260}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AFC1729-327F-490F-9DE8-0B5AB445E260}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
