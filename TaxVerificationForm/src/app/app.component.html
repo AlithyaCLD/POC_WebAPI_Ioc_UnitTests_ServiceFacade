@@ -1,0 +1,41 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+</div>
+<h2>Here are some links to help you start: </h2>
+
+<div fxLayout="column" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
+  <mat-card class="card-container">
+    <mat-card-title class="card-title" fxLayout.gt-xs="row" fxLayout.xs="row">
+      <span class="card-title-text" style="text-align: right;" fxFlex="80%">Display Account Balance</span>
+      <button mat-button (click)="openModal('custom-modal-2')" class="card-title-button">+</button>
+    </mat-card-title>    
+  </mat-card>
+  <mat-card class="card-container">
+    <mat-card-title class="card-title" fxLayout.gt-xs="row" fxLayout.xs="row">
+      <span class="card-title-text" fxFlex="80%">US Tax Juris. not included in current Tax remittance</span>
+      <button mat-button (click)="openDialog()" class="card-title-button">+</button>
+    </mat-card-title>    
+  </mat-card>
+  <mat-card class="card-container">
+    <mat-card-title class="card-title" fxLayout.gt-xs="row" fxLayout.xs="row">
+      <span class="card-title-text" style="text-align: right;" fxFlex="80%">Display Current Period's Selected Line Items</span>
+      <button mat-button class="card-title-button">+</button>
+    </mat-card-title>    
+  </mat-card>
+</div>
+
+<jw-modal id="custom-modal-1" class="jw-modal">
+    <h1>A Custom Modal!</h1>
+    <p>Home page text: <input type="text" /></p>
+    <button (click)="closeModal('custom-modal-1');">Close</button>
+</jw-modal>
+
+<jw-modal id="custom-modal-2" class="jw-modal jw-modal-body">
+    <h1 style="height:800px">A Tall Custom Modal!</h1>
+    <button (click)="closeModal('custom-modal-2');">Close</button>
+</jw-modal>
+

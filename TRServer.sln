@@ -19,7 +19,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TR.ServiceLayer.Interfaces"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TR.ServiceLayer.Implementation", "TR.ServiceLayer.Implementation\TR.ServiceLayer.Implementation.csproj", "{12B562C3-7162-4214-8D61-656947BE1BAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAngular", "WebAngular\WebAngular.csproj", "{1AFC1729-327F-490F-9DE8-0B5AB445E260}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TaxRemittance.FrontEnd", "TaxRemittance.FrontEnd", "{ED16F626-84E9-48D1-AB23-934A187D8FA1}"
+	ProjectSection(SolutionItems) = preProject
+		TaxVerificationForm\.editorconfig = TaxVerificationForm\.editorconfig
+		TaxVerificationForm\.gitignore = TaxVerificationForm\.gitignore
+		TaxVerificationForm\angular.json = TaxVerificationForm\angular.json
+		TaxVerificationForm\package-lock.json = TaxVerificationForm\package-lock.json
+		TaxVerificationForm\package.json = TaxVerificationForm\package.json
+		TaxVerificationForm\README.md = TaxVerificationForm\README.md
+		TaxVerificationForm\tsconfig.json = TaxVerificationForm\tsconfig.json
+		TaxVerificationForm\tslint.json = TaxVerificationForm\tslint.json
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularVerificationForm", "AngularVerificationForm\AngularVerificationForm.csproj", "{06933ACB-09F2-4BB6-8486-08FCD578C0CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,10 +71,10 @@ Global
 		{12B562C3-7162-4214-8D61-656947BE1BAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12B562C3-7162-4214-8D61-656947BE1BAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12B562C3-7162-4214-8D61-656947BE1BAA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1AFC1729-327F-490F-9DE8-0B5AB445E260}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1AFC1729-327F-490F-9DE8-0B5AB445E260}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1AFC1729-327F-490F-9DE8-0B5AB445E260}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1AFC1729-327F-490F-9DE8-0B5AB445E260}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06933ACB-09F2-4BB6-8486-08FCD578C0CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06933ACB-09F2-4BB6-8486-08FCD578C0CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06933ACB-09F2-4BB6-8486-08FCD578C0CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06933ACB-09F2-4BB6-8486-08FCD578C0CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
