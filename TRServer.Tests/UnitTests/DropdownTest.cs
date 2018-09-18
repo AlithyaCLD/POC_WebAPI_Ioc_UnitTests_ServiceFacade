@@ -12,6 +12,17 @@ using Moq;
 
 namespace TRServer.Tests
 {
+    /// <summary>
+    ///     https://github.com/Moq/moq4/wiki/Quickstart
+    ///     https://docs.microsoft.com/en-us/ef/ef6/fundamentals/testing/writing-test-doubles
+    ///
+    ///     https://www.codeproject.com/Articles/47603/Mock-a-Database-Repository-using-Moq
+    ///     https://www.johanbostrom.se/blog/using-idbcontext-and-moq4-to-ease-di-and-test-your-entity-framework-context
+    ///     https://stackoverflow.com/questions/25960192/mocking-ef-dbcontext-with-moq
+    ///     https://www.danylkoweb.com/Blog/the-fastest-way-to-mock-a-database-for-unit-testing-B6
+    /// 
+    /// </summary>
+
     [TestClass]
     public class DropdownTest
     {
